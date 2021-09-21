@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: decision-deployment
+  namespace: dm-demo
+  labels:
+    app: decision-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: decision-deployment
+  template:
+    metadata:
+      labels:
+        app: decision-deployment
+    spec:
+      containers:
+      - name: dm
+        image: quay.io/mathianasj/quarkus-kogito:1.0.0-SNAPSHOT
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
