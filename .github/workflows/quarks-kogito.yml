@@ -26,7 +26,8 @@ jobs:
       env:
         REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
         REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
-      run: |-
+      shell: bash
+      run: |
         mvn -B package \
         -Dquarkus.container-image.build=true \
         -Dquarkus.container-image.push=true \
