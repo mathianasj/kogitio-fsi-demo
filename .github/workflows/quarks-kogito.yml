@@ -23,6 +23,9 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
+      env:
+        REGISTRY_USERNAME: ${{ secrets.REGISTRY_USERNAME }}
+        REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
       run: |-
         mvn -B package \
         -Dquarkus.container-image.build=true \
