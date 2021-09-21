@@ -23,4 +23,10 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package -Dquarkus.container-image.build=true --file quarkus-kogito/pom.xml
+      run: |-
+        mvn -B package \
+        -Dquarkus.container-image.build=true \
+        -Dquarkus.container-image.push=true \
+        -Dquarkus.container-image.username=$REGISTRY_USERNAME \
+        -Dquarkus.container-image.password=$REGISTRY_PASSWORD \
+        --file quarkus-kogito/pom.xml
