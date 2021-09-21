@@ -27,6 +27,6 @@ jobs:
         mvn -B package \
         -Dquarkus.container-image.build=true \
         -Dquarkus.container-image.push=true \
-        -Dquarkus.container-image.username=$REGISTRY_USERNAME \
-        -Dquarkus.container-image.password=$REGISTRY_PASSWORD \
+        -Dquarkus.container-image.username="${REGISTRY_USERNAME}" \
+        -Dquarkus.container-image.password="${REGISTRY_PASSWORD}" \
         --file quarkus-kogito/pom.xml
