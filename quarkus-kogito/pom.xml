@@ -10,7 +10,7 @@
     <kogito.version>1.11.1.Final</kogito.version>
     <maven.compiler.release>11</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <quarkus.version>2.1.0.Final</quarkus.version>
+    <quarkus.version>2.2.3.Final</quarkus.version>
     <surefire.version>2.22.2</surefire.version>
     <quarkus.container-image.registry>quay.io</quarkus.container-image.registry>
     <quarkus.container-image.group>mathianasj</quarkus.container-image.group>
